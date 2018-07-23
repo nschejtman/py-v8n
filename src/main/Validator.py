@@ -16,11 +16,11 @@ class Validator:
     def not_(self):
         return Validator(self.chain, True)
 
-    def greater_than(self, a, b):
-        self.chain.append(Rule("greater_than", rules.greater_than, [a, b], self.invert))
+    def greater_than(self, a):
+        self.chain.append(Rule("greater_than", rules.greater_than, [a], self.invert))
         return Validator(self.chain, False)
 
-    def greater_or_equal(self, a):
+    def greater_or_equal_than(self, a):
         self.chain.append(Rule("greater_or_equal_than", rules.greater_or_equal_than, [a], self.invert))
         return Validator(self.chain, False)
 
