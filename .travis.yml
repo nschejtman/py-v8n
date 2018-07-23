@@ -1,0 +1,9 @@
+language: python
+python:
+  - 3.6
+
+before_install:
+  - ./tools/travis-before-install.sh
+
+sctipt:
+  - ./tools/travis-test.sh
