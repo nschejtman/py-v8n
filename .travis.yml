@@ -2,11 +2,8 @@ language: python
 python:
   - 3.6
 
-before_install:
-  - pip install --upgrade pip
+before_install: pip install --upgrade pip
 
-install:
-  - pip install -r requirements.txt
+install: pip install -r requirements.txt
 
-sctipt:
-  - ./tools/travis-test.sh
+sctipt: python -m pytest src/test/v8n.py
