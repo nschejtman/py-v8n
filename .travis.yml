@@ -6,4 +6,4 @@ before_install: pip install --upgrade pip
 
 install: pip install -r requirements.txt
 
-sctipt: python -m pytest src/test/v8n.py
+script: python -m pytest src/test/v8n.py
