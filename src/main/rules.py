@@ -7,7 +7,7 @@ def greater_or_equal_than(args):
 
 
 def between(args):
-    return args[1] <= args[0] < args[2]
+    return args[1] <= args[0] <= args[2]
 
 
 def str_(args):
@@ -35,7 +35,7 @@ def min_length(args):
 
 
 def max_length(args):
-    return len(args) < args[1]
+    return len(args[0]) <= args[1]
 
 
 def length(args):
@@ -51,7 +51,7 @@ def first(args):
 
 
 def last(args):
-    last_idx = len(args) - 1
+    last_idx = len(args[0]) - 1
     return args[0][last_idx] == args[1]
 
 
@@ -76,7 +76,7 @@ def less_or_equal_than(args):
 
 
 def includes(args):
-    return args[0].find(args[1]) != -1
+    return args[1] in args[0]
 
 
 def positive(args):
