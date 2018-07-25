@@ -19,4 +19,27 @@ v8n()
   .not_().equal(32)
   .test(74) # true
 ```
+## What is it?
+`py-v8n` is a reusable fluent validation library. 
 
+## Installation
+```shell
+pip install py-v8n
+```  
+
+## Usage
+
+```python
+from py-v8n import v8n
+
+# Create a validator
+hello_validator = v8n()\
+    .str_()\
+    .first("H")\
+    .last("o")\
+    
+# Check values
+hello_validator.test("Hello") # True
+hello_validator.test("Good bye") # False
+ 
+```
