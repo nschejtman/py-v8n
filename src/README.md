@@ -36,7 +36,7 @@ from py_v8n import v8n
 hello_validator = v8n()\
     .str_()\
     .first("H")\
-    .last("o")\
+    .last("o")
     
 # Check values
 hello_validator.test("Hello") # True

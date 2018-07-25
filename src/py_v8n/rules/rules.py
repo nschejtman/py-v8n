@@ -10,14 +10,6 @@ def between(args):
     return args[1] <= args[0] <= args[2]
 
 
-def str_(args):
-    return _type_of(args[0], str)
-
-
-def int_(args):
-    return _type_of(args[0], int)
-
-
 def even(args):
     return divisible_by([args[0], 2])
 
@@ -53,18 +45,6 @@ def first(args):
 def last(args):
     last_idx = len(args[0]) - 1
     return args[0][last_idx] == args[1]
-
-
-def list_(args):
-    return _type_of(args[0], list)
-
-
-def bool_(args):
-    return _type_of(args[0], bool)
-
-
-def _type_of(val, _type):
-    return type(val) == _type
 
 
 def less_than(args):
