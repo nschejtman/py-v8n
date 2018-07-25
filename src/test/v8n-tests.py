@@ -1,6 +1,6 @@
 import unittest
 
-from src.main.v8n import v8n
+from src.py_v8n import v8n
 
 
 class TestV8N(unittest.TestCase):

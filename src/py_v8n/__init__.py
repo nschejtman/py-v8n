@@ -1,4 +1,4 @@
-from src.main.Validator import Validator
+from .Validator import Validator
 
 
 def v8n():
