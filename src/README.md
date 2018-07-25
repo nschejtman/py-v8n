@@ -30,7 +30,7 @@ pip install py-v8n
 ## Usage
 
 ```python
-from py-v8n import v8n
+from py_v8n import v8n
 
 # Create a validator
 hello_validator = v8n()\
