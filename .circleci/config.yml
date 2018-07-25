@@ -48,7 +48,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python -m pytest src/test/v8n.py
+            python -m pytest src/test/v8n-tests.py
 
       - store_artifacts:
           path: test-reports
