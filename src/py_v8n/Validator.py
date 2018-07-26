@@ -86,7 +86,7 @@ class Validator:
         return Validator(self.chain, False)
 
     def less_or_equal_than(self, a):
-        self.chain.append(Rule("be less or equal than" % a, less_or_equal_than, [a], self.invert))
+        self.chain.append(Rule("be less or equal than %s" % a, less_or_equal_than, [a], self.invert))
         return Validator(self.chain, False)
 
     def includes(self, a):
