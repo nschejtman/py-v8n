@@ -1,4 +1,5 @@
 import unittest
+from array import array
 
 from src.py_v8n import v8n
 
@@ -291,6 +292,45 @@ class TestV8N(unittest.TestCase):
         validator = v8n().not_().list_()
         self.assertFalse(validator.test([1]))
         self.assertTrue(validator.test(1))
+
+    def test_float_(self):
+        validator = v8n().float_()
+        self.assertFalse(validator.test(1))
+        self.assertTrue(validator.test(1.0))
+
+    def test_dict_(self):
+        validator = v8n().dict_()
+        self.assertFalse(validator.test(1))
+        self.assertTrue(validator.test({'a': 1}))
+
+    def test_set_(self):
+        validator = v8n().set_()
+        self.assertFalse(validator.test(1))
+        self.assertTrue(validator.test({1, 2, 3}))
+
+    def test_tuple_(self):
+        validator = v8n().tuple_()
+        self.assertFalse(validator.test(1))
+        self.assertTrue(validator.test((1, 2)))
+
+    def test_of_type(self):
+        validator = v8n().of_type(array)
+        self.assertFalse(validator.test(1))
+        arr = array('i')
+        arr.append(-1)
+        arr.append(1)
+        self.assertTrue(validator.test(arr))
+
+    def test_every(self):
+        validator = v8n().list_().every().int_().between(1, 10)
+        self.assertFalse(validator.test([1, 5, 11]))
+        self.assertFalse(validator.test([1, 5, '9']))
+        self.assertTrue(validator.test([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
+
+    def test_validate(self):
+        validator = v8n().float_().between(0, 1)
+        with self.assertRaises(ValueError, msg="my_var must:\n\t- be between 0 and 1 (inclusive)"):
+            validator.validate(2.0, value_name="my_var")
 
 
 if __name__ == '__main__':
