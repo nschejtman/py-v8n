@@ -3,3 +3,5 @@ __pycache__
 .pytest_cache
 .cache
 *.pyc
+src/dist
+src/py_v8n.egg-info
