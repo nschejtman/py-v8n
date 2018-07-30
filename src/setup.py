@@ -5,14 +5,14 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py-v8n",
-    version="0.0.5",
+    version="0.1.0a0",
     author="Nicolas A. Schejtman",
     author_email="nschejtman93@gmail.com",
     description="Python fluent validation",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/nschejtman/py-v8n",
-    packages=['py_v8n', 'py_v8n.rulessourpip '],
+    packages=['py_v8n'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
