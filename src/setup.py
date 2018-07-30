@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="py-v8n",
-    version="0.0.3",
+    version="0.0.4",
     author="Nicolas A. Schejtman",
     author_email="nschejtman93@gmail.com",
     description="Python fluent validation",
